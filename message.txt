@@ -1,0 +1,268 @@
+1.
+Abstrakt: Formulář správně spočítá souhlásky/samohlásky 
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Do pole "First name" zadejte název Libor
+Pole „First name“ je viditelně zobrazeno na stránce 
+3. Do pole "City" zadejte název Praha
+Pole "City" je viditelně zobrazeno na stránce 
+4. Stiskneme tlačítko "Odeslat"
+Formulář správně spočítá počet souhlásek a samohlásek
+
+Bug report není třeba, byl splněn očekávaný výsledek.
+
+2.
+Abstrakt: Formulář správně spočítá souhlásky/samohlásky ve slovech s diakritikou
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Do pole "First name" zadejte název Vavřinec
+Pole „First name“ je viditelně zobrazeno na stránce 
+3. Do pole "City" zadejte název Třeboň
+Pole "City" je viditelně zobrazeno na stránce 
+4. Stiskneme tlačítko "Odeslat"
+Formulář správně spočítá počet souhlásek a samohlásek
+
+
+Formulář neprávně počítá souhlásky/samohlásky ve slovech s diakritikou
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Do pole "First name" zadáme název Vavřinec
+3. Do pole "City" zadáme název Třeboň
+4. Stiskneme tlačítko "Odeslat"
+
+Skutečný výsledek:
+
+Welcome Vavřinec from Třeboň. There are 3 vowels in your first name and 6 consonants in your first name and there are 2 vowels in your city and 6 consonants in your city. 
+
+Očekávaný výsledek:
+
+Formulář správně spočítá počet souhlásek a samohlásek. Tedy ve městě Třeboň 2 samohlásky a 4 souhlásky, ve jméně Vavřinec 3 samohlásky a 5 souhlásek.
+
+
+3.
+
+Abstrakt: Formulář správně spočítá souhlásky/samohlásky ve víceslovných názvech
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Do pole "First name" zadejte název Vilém Horák
+Pole „First name“ je viditelně zobrazeno na stránce 
+3. Do pole "City" zadejte název Česká Třebová
+Pole "City" je viditelně zobrazeno na stránce 
+4. Stiskneme tlačítko "Odeslat"
+Formulář správně spočítá počet souhlásek a samohlásek
+
+Formulář neprávně počítá souhlásky/samohlásky ve víceslovných názvech
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Do pole "First name" zadáme název Vilém Horák
+3. Do pole "City" zadáme název Česká Třebová
+4. Stiskneme tlačítko "Odeslat"
+
+Skutečný výsledek:
+
+Welcome Vilém Horák from Česká Třebová. There are 2 vowels in your first name and 11 consonants in your first name and there are 3 vowels in your city and 14 consonants in your city. 
+
+Očekávaný výsledek:
+
+Formulář správně spočítá počet souhlásek a samohlásek. Tedy ve městě Česká Třebová 5 samohlásky a 7 souhlásek, ve jméně Vilém Horák 4 samohlásky a 6 souhlásek.
+
+4. 
+
+Abstrakt: Formulář zahlásí chybu po zadání čísel
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Do pole "First name" zadejte hodnotu 1234
+Pole „First name“ je viditelně zobrazeno na stránce 
+3. Stiskneme tlačítko "Odeslat"
+Zobrazí se chybová hláška, např. " špatně zadaná hodnota."
+
+Formulář neprávně počítá souhlásky/samohlásky po zadání čísel
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Do pole "First name" zadáme hodnotu 1234
+4. Stiskneme tlačítko "Odeslat"
+
+Skutečný výsledek:
+
+Welcome 1234 from . There are 0 vowels in your first name and 4 consonants in your first name and there are 0 vowels in your city and 0 consonants in your city. 
+
+Očekávaný výsledek:
+
+Zobrazí se chybová hláška, např. " špatně zadaná hodnota."
+
+
+5. 
+
+Abstrakt: Formulář zahlásí chybu po zadání specifických znaků
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Do pole "First name" zadejte hodnotu +-*
+Pole „First name“ je viditelně zobrazeno na stránce 
+3. Stiskneme tlačítko "Odeslat"
+Zobrazí se chybová hláška, např. " špatně zadaná hodnota."
+
+
+Formulář neprávně počítá souhlásky/samohlásky po zadání specifických znaků
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Do pole "First name" zadáme hodnotu +-*
+4. Stiskneme tlačítko "Odeslat"
+
+Skutečný výsledek:
+
+Welcome +-* from . There are 0 vowels in your first name and 3 consonants in your first name and there are 0 vowels in your city and 0 consonants in your city. 
+
+Očekávaný výsledek:
+
+Zobrazí se chybová hláška, např. " špatně zadaná hodnota."
+
+
+6.
+
+Abstrakt: Formulář zahlásí chybu po zadání cizojazyčného jména
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Do pole "First name" zadejte hodnotu Anaïs
+Pole „First name“ je viditelně zobrazeno na stránce 
+3. Stiskneme tlačítko "Odeslat"
+Zobrazí se hláška, např." jméno musí být zapsáno v české abecedě"
+
+Formulář neprávně počítá souhlásky/samohlásky v cizojazyčných jménech
+
+Kroky
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Do pole "First name" zadáme hodnotu Anaïs
+4. Stiskneme tlačítko "Odeslat"
+
+Skutečný výsledek: 
+
+Welcome Anaïs from . There are 2 vowels in your first name and 4 consonants in your first name and there are 0 vowels in your city and 0 consonants in your city. 
+
+Očekávaný výsledek:
+
+Zobrazí se hláška, např." jméno musí být zapsáno v české abecedě"
+
+
+7.
+
+Abstrakt: Formulář je jazykově sjednocený
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Zkontrolujte, zda je webové stránka psaná v jednom jazyce
+Celá stránka je psaná v jednom jazyce
+
+
+Formulář obsahuje české i anglické názvy
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Zkontrolujeme všechna slova na stránce
+
+Skutečný výsledek: 
+První dvě položky formuláře jsou psané anglicky - Fisrt name a City. Tlačítko "Odeslat" je ale v češtině.
+
+Očekávaný výsledek:
+
+Formulář bude jazykově sjednocený
+
+8.
+
+Abstrakt: Formulář rozezná písmena od hlásek
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Do pole "First name" zadejte hodnotu ůěyý
+Pole „First name“ je viditelně zobrazeno na stránce 
+3. Stiskneme tlačítko "Odeslat"
+Zadané hodnoty formulář nevyhodnotí jako hlásky a vůbec je tedy nespočítá
+
+
+Formulář neprávně zařazuje písmena mezi hlásky
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Do pole "First name" zadáme hodnotu ůěyý
+3 Stiskneme tlačítko "Odeslat"
+
+Skutečný výsledek: 
+
+Welcome ůěyý from . There are 1 vowels in your first name and 6 consonants in your first name and there are 0 vowels in your city and 0 consonants in your city. 
+
+Očekávaný výsledek:
+
+Zadané hodnoty formulář nevyhodnotí jako hlásky a vůbec je tedy nespočítá
+
+9.
+
+Abstrakt: Výsledná hláška je stylisticky správně
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Stránku přeložíme do češtiny
+Stránka se přeloží a bude gramaticky i stylisticky správně
+3. Do pole "First name" zadáme jméno Věra
+Pole „First name“ je viditelně zobrazeno na stránce 
+4. Stiskneme tlačítko "Odeslat"
+Výsledná hláška je gramaticky a stylisticky správně
+
+
+
+Výsledná hláška je v českém překladu stylisticky špatně
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Stránku přeložíme do češtiny
+3. Do pole "First name" zadáme jméno Věra
+4. Stiskneme tlačítko "Odeslat"
+
+Skutečný výsledek: 
+
+Vítáme Věru z . Vaše křestní jméno obsahuje 1 samohlásku a 4 souhlásky ve vašem křestním jménu a ve vašem městě je 0 samohlásek a ve vašem městě 0 souhlásek. 
+
+Očekávaný výsledek:
+Výsledná hláška je gramaticky a stylisticky správně. Například: Vítáme Věru z . Vaše křestní jméno obsahuje 1 samohlásku a 4 souhlásky a ve vašem městě je 0 samohlásek a 0 souhlásek. 
+
+
+10.
+
+Abstrakt: Formulář je pro uživatele přehledný
+Krok
+Očekávaný výsledek
+1. Přejděte na adresu https://test-intro.engeto.com/ ve webovém prohlížeči Mozilla
+Webová stránka je načtena
+2. Stránku prohlídněte a zkontrolujte, zda je dobře čitelná a uživatelský přívětivá
+Stránka je pro uživatele přehledná a snadno se na ní zorientuje
+
+
+Formulář je pro uživatele nepřehledný
+
+Kroky:
+1. Otevřeme stránku https://test-intro.engeto.com/
+2. Stránku prohlídneme a zkontrolujeme, zda je uživatelsky přívětivá
+
+Skutečný výsledek: 
+
+Stránka není vizuálně hezky zpracovaná. Jednotlivá pole First name a City nejsou odsazená. Zhoršuje to čitelnost a orientaci na stránce.
+
+Očekávaný výsledek:
+Formulář bude přehledná a uživatel se v něm snadno zorientuje
